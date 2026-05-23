@@ -5,6 +5,8 @@ import { deleteToken, getUserFromToken } from "../utils/token";
 import "./stylesheets/Custom.css";
 import Loading from "../components/Loading";
 import { FaShare, FaPen, FaEraser } from "react-icons/fa";
+import { DEMO_MODE } from "../utils/demo";
+import { FAKE_WALLS, FAKE_ROUTES } from "../demo/fakeData";
 
 const routeTypes = [
   { name: "Crimpy", icon: `${process.env.PUBLIC_URL}/images/icon_crimpy.png` },
@@ -58,6 +60,10 @@ const Custom = ({ showMessage }) => {
   }, []);
 
   useEffect(() => {
+    if (DEMO_MODE) {
+      setWalls(FAKE_WALLS);
+      return;
+    }
     if (id) {
       axios
         .get(`https://node.me2vegan.com/api/customs/walls/share/${id}`)
@@ -94,6 +100,11 @@ const Custom = ({ showMessage }) => {
     setShowSaveArea(false);
     setShowOutput(false);
     setIsCanvasVisible(true);
+
+    if (DEMO_MODE) {
+      setRoutes(FAKE_ROUTES[wall.wallName]?.customs || []);
+      return;
+    }
 
     axios
       .get(`https://node.me2vegan.com/api/customs/walls/${wall.wallName}`)

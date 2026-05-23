@@ -356,7 +356,6 @@ const Footprint = ({ showMessage }) => {
   };
 
   // Demo 模式：Leaflet 地圖
-  const leafletMapRef = useRef(null);
   const leafletInstanceRef = useRef(null);
 
   useEffect(() => {

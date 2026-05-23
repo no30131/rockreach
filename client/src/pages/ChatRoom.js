@@ -183,6 +183,7 @@ const ChatRoom = ({ userId, friendId, showMessage }) => {
                       disabled={chatLocked}
                       style={{
                         background:'#fff',
+                        color:'#333',
                         border:'1.5px solid rgb(255,150,112)',
                         borderRadius:22,
                         padding:'8px 16px',
@@ -194,7 +195,7 @@ const ChatRoom = ({ userId, friendId, showMessage }) => {
                         width:'100%',
                       }}
                       onMouseEnter={e => { if(!chatLocked) { e.target.style.background='rgb(255,150,112)'; e.target.style.color='#fff'; }}}
-                      onMouseLeave={e => { e.target.style.background='#fff'; e.target.style.color=''; }}
+                      onMouseLeave={e => { e.target.style.background='#fff'; e.target.style.color='#333'; }}
                     >
                       {opt.send}
                     </button>
