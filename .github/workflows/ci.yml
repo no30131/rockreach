@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js for server
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies for server
+        run: |
+          cd server
+          npm install
+
+      - name: Set up Node.js for client
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies for client
+        run: |
+          cd client
+          npm install
+
+      - name: Build client
+        run: |
+          cd client
+          npm run build
+
+      - name: List client/build files
+        run: |
+          ls -la client/build
