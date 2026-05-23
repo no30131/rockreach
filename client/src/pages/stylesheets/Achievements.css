@@ -1,0 +1,72 @@
+.achievements-container {
+  margin-top: 30px;
+  min-height: 880px;
+}
+
+.wall-data {
+  min-height: 880px;
+}
+
+.wall-data > img {
+  /* height: 500px; */
+  width: 100%;
+  max-width: 350px;
+}
+
+.wall-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.processed-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.processed-images img {
+  height: 400px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.completed-text {
+  color: #bb1c00;
+  font-size: 12px;
+}
+
+.Achievements-share-button {
+  /* margin: 0 0 -55px 0; */
+  /* padding-top: 0px; */
+  width: 320px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Achievements-share-button > button {
+  cursor: pointer;
+  border: none;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  font-size: 20px;
+  margin-top: -45px;
+}
+
+.Achievements-share-button > button:hover {
+  color: #0961c0;
+  font-size: 21px;
+  padding-bottom: 2px;
+}
+
+.spaceA {
+  margin-bottom: 30px;
+}
+
+.achievements-container > .wall-data > .custom-item-details > .custom-item-details-h3-div {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
