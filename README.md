@@ -1,6 +1,6 @@
 # 🧗 RockReach
 
-English | [繁體中文](#-rockreach--岩途-1)
+English | [繁體中文](#rockreach--岩途)
 
 A logging platform built for climbers. Upload route photos and videos, view personalized data analytics, design custom routes, and interact with the community.
 
@@ -117,7 +117,7 @@ Also check out my YouTube channel 🎬 [Melody's Flow](https://www.youtube.com/@
 
 # 🧗 RockReach | 岩途
 
-[English](#-rockreach) | 繁體中文
+[English](#rockreach) | 繁體中文
 
 專為攀岩玩家設計的紀錄平台。上傳攀岩路線照片與影片、查看個人化數據分析、設計自訂路線，並與社群互動。
 
